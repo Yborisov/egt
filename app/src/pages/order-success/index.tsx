@@ -15,24 +15,24 @@ const OrderSuccessPage: FC = () => {
   return (
     <Box display="flex" flexDirection="column" alignItems="center">
       <Typography variant="h4">Success</Typography>
-      <Box
-        sx={{ width: '40vw' }}
-        display="flex"
-        flexDirection="column"
-        p={5}
-        gap={2}>
-        <Paper>
+      <Paper>
+        <Box
+          sx={{ width: '40vw' }}
+          display="flex"
+          flexDirection="column"
+          p={5}
+          gap={2}>
           <ReadOnlyField field="Product cost" value={order.totalAmount} />
           <ReadOnlyField field="VAT" value={order.vat} />
           <ReadOnlyField
             field="Total cost"
             value={order.vat + order.totalAmount}
           />
-        </Paper>
-      </Box>
-      <Button variant="contained" onClick={onClick}>
-        Go to home
-      </Button>
+          <Button variant="contained" onClick={onClick}>
+            Go to home
+          </Button>
+        </Box>
+      </Paper>
     </Box>
   );
 };
